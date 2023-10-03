@@ -52,7 +52,7 @@ const Status = styled.h2`
 
 export default function Home() {
   const [todoValue, setTodoValue] = useState('');
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState<ITodo[]>([]);
   const [deletedTodo, setDeletedTodo] = useState(-1);
   const {data, isLoading, isError} = useQuery({
     queryKey: ['todos'],
